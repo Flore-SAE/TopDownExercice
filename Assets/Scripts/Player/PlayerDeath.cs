@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class EnemyDeath : MonoBehaviour
+public class PlayerDeath : MonoBehaviour
 {
     private HealthBehaviour healthBehaviour;
 
@@ -19,6 +20,9 @@ public class EnemyDeath : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
+        GetComponent<Animator>().SetBool("IsDead", true);
+        GetComponent<PlayerInput>().enabled = false;
+        GetComponent<Rigidbody2D>().simulated = false;
+        Destroy(this);
     }
 }

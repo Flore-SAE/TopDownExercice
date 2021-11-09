@@ -1,13 +1,9 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerAnimationsController : MonoBehaviour
 {
-    private Controls controls;
-
     private Animator animator;
-    private HealthBehaviour healthBehaviour;
     private new Rigidbody2D rigidbody2D;
 
 
@@ -15,20 +11,19 @@ public class PlayerAnimationsController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rigidbody2D = GetComponent<Rigidbody2D>();
-        healthBehaviour = GetComponent<HealthBehaviour>();
-        controls = new Controls();
-        controls.Enable();
-        controls.Player.Move.performed += OnMovePerformed;
-        controls.Player.Fire.performed += OnFirePerformed;
     }
 
-    private void OnFirePerformed(InputAction.CallbackContext obj)
+    public void OnFire(InputAction.CallbackContext obj)
     {
+        if (!obj.performed)
+            return;
         animator.SetTrigger("Attack");
     }
 
-    private void OnMovePerformed(InputAction.CallbackContext obj)
+    public void OnMove(InputAction.CallbackContext obj)
     {
+        if (!obj.performed)
+            return;
         var lastFacingDirection = obj.ReadValue<Vector2>();
         animator.SetFloat("StickX", lastFacingDirection.x);
         animator.SetFloat("StickY", lastFacingDirection.y);
@@ -36,7 +31,6 @@ public class PlayerAnimationsController : MonoBehaviour
 
     private void Update()
     {
-       animator.SetFloat("Speed", rigidbody2D.velocity.sqrMagnitude);
-       animator.SetBool("IsDead", healthBehaviour.currentHealth == 0);
+        animator.SetFloat("Speed", rigidbody2D.velocity.sqrMagnitude);
     }
 }
