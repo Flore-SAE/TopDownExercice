@@ -6,6 +6,9 @@ public class Spawner : MonoBehaviour
     public float minSpawnTime, maxSpawnTime;
     public GameObject enemy;
 
+    public Transform objectToRotateAround;
+    public float speed;
+
     private void Start()
     {
         StartCoroutine(SpawnCoroutine());
@@ -24,4 +27,10 @@ public class Spawner : MonoBehaviour
     {
         Instantiate(enemy, transform.position, Quaternion.identity);
     }
+
+    private void Update()
+    {
+        transform.RotateAround(objectToRotateAround.position, Vector3.forward, speed * Time.deltaTime);
+    }
+
 }
