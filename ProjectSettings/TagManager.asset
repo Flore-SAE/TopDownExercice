@@ -8,12 +8,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - IgnoreAll
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Sword
   - 
   - 
   - 
@@ -44,12 +44,12 @@ TagManager:
   - name: Back
     uniqueID: 3897047847
     locked: 0
+  - name: Ennemies
+    uniqueID: 3364095531
+    locked: 0
   - name: Front
     uniqueID: 241794753
     locked: 0
   - name: Player
     uniqueID: 3366775703
-    locked: 0
-  - name: Ennemies
-    uniqueID: 3364095531
     locked: 0

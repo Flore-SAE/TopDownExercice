@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WalkUp
+  m_Name: Die
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: a1c52d28fd7c0e8408389309977464a4, type: 3}
-    - time: 0.16666667
-      value: {fileID: 21300000, guid: 0eddf5cbb9d730a4c8f3bf85e11c0658, type: 3}
-    - time: 0.33333334
-      value: {fileID: 21300000, guid: 2caddf015e7b8794c9742c8e2b68d84c, type: 3}
-    - time: 0.5
-      value: {fileID: 21300000, guid: 52344e088e0d21b47897c1d5fe495706, type: 3}
+      value: {fileID: 21300000, guid: aeaa7ca7e4aad6f4d998fcf2ec7a7fd4, type: 3}
+    - time: 0.26666668
+      value: {fileID: 21300000, guid: 143cfeefd8da54a4b9fbaaa6dc173825, type: 3}
+    - time: 0.48333332
+      value: {fileID: 21300000, guid: 8d221959448f2f146b17bb3fcae88a3a, type: 3}
+    - time: 0.75
+      value: {fileID: 21300000, guid: 31922ad6899bf774bba9d42ae11c7eb1, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,21 +46,21 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: a1c52d28fd7c0e8408389309977464a4, type: 3}
-    - {fileID: 21300000, guid: 0eddf5cbb9d730a4c8f3bf85e11c0658, type: 3}
-    - {fileID: 21300000, guid: 2caddf015e7b8794c9742c8e2b68d84c, type: 3}
-    - {fileID: 21300000, guid: 52344e088e0d21b47897c1d5fe495706, type: 3}
+    - {fileID: 21300000, guid: aeaa7ca7e4aad6f4d998fcf2ec7a7fd4, type: 3}
+    - {fileID: 21300000, guid: 143cfeefd8da54a4b9fbaaa6dc173825, type: 3}
+    - {fileID: 21300000, guid: 8d221959448f2f146b17bb3fcae88a3a, type: 3}
+    - {fileID: 21300000, guid: 31922ad6899bf774bba9d42ae11c7eb1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.76666665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
