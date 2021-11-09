@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    public bool isRunning;
     public float minSpawnTime, maxSpawnTime;
     public GameObject enemy;
 
@@ -13,10 +14,11 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator SpawnCoroutine()
     {
-        while (true)
+        isRunning = true;
+        while (isRunning)
         {
-            Spawn();
             yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
+            Spawn();
         }
     }
 

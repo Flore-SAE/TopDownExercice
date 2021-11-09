@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(HealthBehaviour))]
-public class DamageTaker : MonoBehaviour
+public abstract class DamageTaker : MonoBehaviour
 {
     private HealthBehaviour healthBehaviour;
 
@@ -10,8 +10,9 @@ public class DamageTaker : MonoBehaviour
         healthBehaviour = GetComponent<HealthBehaviour>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected void TakeDamage(DamageGiver damageGiver)
     {
-        healthBehaviour.TakeDamage(1);
+        if(damageGiver != null)
+            healthBehaviour.TakeDamage(damageGiver.damageToGive);
     }
 }

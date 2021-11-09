@@ -1,19 +1,7 @@
-using UnityEngine;
-
-public class EnemyDeath : MonoBehaviour
+public class EnemyDeath : DeathBehaviour
 {
-    private HealthBehaviour healthBehaviour;
-
-    private void Awake()
+    protected override void Die()
     {
-        healthBehaviour = GetComponent<HealthBehaviour>();
-    }
-
-    private void Update()
-    {
-        if (healthBehaviour.currentHealth == 0)
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
