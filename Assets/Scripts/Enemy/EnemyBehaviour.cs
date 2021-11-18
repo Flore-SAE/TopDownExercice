@@ -1,23 +1,21 @@
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class EnemyBehaviour : MonoBehaviour
 {
-    public float speed;
 
-    private new Rigidbody2D rigidbody2D;
-
+    private Mover2D move2D;
     private Transform player;
 
     private void Awake()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        move2D = GetComponent<Mover2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void FixedUpdate()
     {
         var playerDirection = player.position - transform.position;
-        playerDirection = playerDirection.normalized;
-        rigidbody2D.velocity = playerDirection * speed;
+        move2D.Move(playerDirection);
     }
+
 }
