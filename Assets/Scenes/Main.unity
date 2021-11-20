@@ -10160,7 +10160,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
@@ -10830,6 +10829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40791f124f794a24bc7e97a934b53f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRunning: 0
   minSpawnTime: 1
   maxSpawnTime: 5
   enemy: {fileID: 7656827130424974269, guid: 3a6e0dd2938b321479c331a1a3ecfcf8, type: 3}
