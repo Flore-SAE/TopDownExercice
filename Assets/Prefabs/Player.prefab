@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  startHealth: 1
+  startHealth: 3
 --- !u!114 &4917766077131732885
 MonoBehaviour:
   m_ObjectHideFlags: 0
