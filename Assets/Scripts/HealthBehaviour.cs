@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthBehaviour : MonoBehaviour
 {
@@ -6,9 +7,12 @@ public class HealthBehaviour : MonoBehaviour
 
     public int currentHealth { get; private set; }
 
+    public UnityEvent<int> healthChanged;
+
     private void Start()
     {
         currentHealth = startHealth;
+        healthChanged.Invoke(currentHealth);
     }
 
     public void TakeDamage(int damage)
@@ -24,5 +28,6 @@ public class HealthBehaviour : MonoBehaviour
     private void ModifyHealth(int modifier)
     {
         currentHealth = Mathf.Clamp(currentHealth + modifier, 0, maxHealth);
+        healthChanged.Invoke(currentHealth);
     }
 }

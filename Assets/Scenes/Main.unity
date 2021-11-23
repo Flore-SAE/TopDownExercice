@@ -218,7 +218,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hearts container
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1057590422509771875, guid: b93ceeb88da58aa4489f2a2fbf828874, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b93ceeb88da58aa4489f2a2fbf828874, type: 3}
 --- !u!1001 &278164177
 PrefabInstance:
@@ -274,6 +275,46 @@ PrefabInstance:
     - target: {fileID: 6231384520043658972, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
+      propertyPath: healChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
+      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
+      propertyPath: healChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
+      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
+      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1635469968}
+    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
+      propertyPath: healChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
+      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
+      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateHearts
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
+      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LifeDisplayer2, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
+      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
@@ -11042,11 +11083,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1635469966 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6212787586772762223, guid: b93ceeb88da58aa4489f2a2fbf828874, type: 3}
+  m_PrefabInstance: {fileID: 216574801}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1635469967 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4397235653945464621, guid: b93ceeb88da58aa4489f2a2fbf828874, type: 3}
   m_PrefabInstance: {fileID: 216574801}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1635469968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635469966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4679b997e06335b45b31661f6e20e71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heart: {fileID: 72747044412020934, guid: f7aa4a80278e1a343b9aa7a2d8980738, type: 3}
 --- !u!1 &1700783483
 GameObject:
   m_ObjectHideFlags: 0
