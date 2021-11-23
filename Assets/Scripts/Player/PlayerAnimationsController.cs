@@ -3,12 +3,10 @@ using UnityEngine;
 public class PlayerAnimationsController : MonoBehaviour
 {
     private Animator animator;
-    private new Rigidbody2D rigidbody2D;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     public void OnDie()
@@ -32,8 +30,8 @@ public class PlayerAnimationsController : MonoBehaviour
         animator.SetTrigger("Roll");
     }
 
-    private void Update()
+    public void SetSpeed(float speed)
     {
-        animator.SetFloat("Speed", rigidbody2D.velocity.sqrMagnitude);
+        animator.SetFloat("Speed", speed);
     }
 }

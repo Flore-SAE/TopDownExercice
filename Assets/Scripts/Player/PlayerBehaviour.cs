@@ -8,16 +8,17 @@ public class PlayerBehaviour : MonoBehaviour
     private Roller2D roll;
 
     private PlayerAnimationsController animations;
+    private new Rigidbody2D rigidbody2D;
 
     private Vector2 direction;
     private Vector2 lastFacingDirection;
 
-    // Start is called before the first frame update
     private void Awake()
     {
         move = GetComponent<AddForceMove2D>();
         roll = GetComponent<Roller2D>();
         animations = GetComponent<PlayerAnimationsController>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     public void OnRoll(InputAction.CallbackContext obj)
@@ -30,25 +31,25 @@ public class PlayerBehaviour : MonoBehaviour
     public void OnMove(InputAction.CallbackContext obj)
     {
         var value = obj.ReadValue<Vector2>();
-        if (obj.performed)
-        {
-            animations.UpdateFacingDirection(value);
-            lastFacingDirection = value;
-        }
-
         direction = value;
+        if (!obj.performed) return;
+        animations.UpdateFacingDirection(value);
+        lastFacingDirection = value;
     }
 
     public void OnFire(InputAction.CallbackContext obj)
     {
-        if (obj.performed)
-        {
-            animations.OnAttack();
-        }
+        if (!obj.performed) return;
+        animations.OnAttack();
     }
 
     private void FixedUpdate()
     {
         move.Move(direction);
+    }
+
+    private void Update()
+    {
+       animations.SetSpeed(rigidbody2D.velocity.sqrMagnitude);
     }
 }
