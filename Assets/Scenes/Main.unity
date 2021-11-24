@@ -290,12 +290,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
       propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
       propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: 902cf8075ea5a6f4783b7703688b948d, type: 2}
+      objectReference: {fileID: 11400000, guid: 54c2670c27252d544a4227fcdfdf5936, type: 2}
     - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
       propertyPath: healChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -310,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
       propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameEvent, Assembly-CSharp
+      value: GameEvent`1[[System.Int32, mscorlib
       objectReference: {fileID: 0}
     - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
       propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -11102,30 +11102,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1635469966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34cb8fa6fb444251b56d7fc13b9abc7d, type: 3}
+  m_Script: {fileID: 11500000, guid: f779692f71914600853d4c08a9e05022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart: {fileID: 72747044412020934, guid: f7aa4a80278e1a343b9aa7a2d8980738, type: 3}
---- !u!114 &1635469971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635469966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb2003dbd6d47579fc0cc6eed73816a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 902cf8075ea5a6f4783b7703688b948d, type: 2}
+  gameEvent: {fileID: 11400000, guid: 54c2670c27252d544a4227fcdfdf5936, type: 2}
   gameEventCallback:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1635469968}
-        m_TargetAssemblyTypeName: LifeDisplayer5, Assembly-CSharp
+      - m_Target: {fileID: 1635469969}
+        m_TargetAssemblyTypeName: LifeDisplayer2, Assembly-CSharp
         m_MethodName: UpdateHearts
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11134,6 +11121,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1635469969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635469966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4679b997e06335b45b31661f6e20e71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heart: {fileID: 72747044412020934, guid: f7aa4a80278e1a343b9aa7a2d8980738, type: 3}
 --- !u!1 &1700783483
 GameObject:
   m_ObjectHideFlags: 0
