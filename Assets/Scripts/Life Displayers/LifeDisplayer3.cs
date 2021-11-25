@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class LifeDisplayer3 : MonoBehaviour
@@ -6,7 +5,7 @@ public class LifeDisplayer3 : MonoBehaviour
     public GameObject heart;
     public PlayerHealth playerHealth;
 
-    public void UpdateHearts(int heartNumber)
+    private void UpdateHearts(int heartNumber)
     {
         foreach (Transform child in transform)
         {

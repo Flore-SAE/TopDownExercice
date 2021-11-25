@@ -8,6 +8,7 @@ public class HealthBehaviour : MonoBehaviour
     public int currentHealth { get; private set; }
 
     public UnityEvent<int> healthChanged;
+    public UnityEvent damageTaken;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class HealthBehaviour : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        damageTaken.Invoke();
         ModifyHealth(-damage);
     }
 

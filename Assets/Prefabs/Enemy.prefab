@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 3832381819518332894}
   - component: {fileID: 4998871936761360729}
   - component: {fileID: 6671601830881938850}
-  - component: {fileID: 1324948746}
   - component: {fileID: 2246303789727134232}
   - component: {fileID: 8290867555349826787}
   - component: {fileID: 1324948749}
   - component: {fileID: 7480215165192360564}
   - component: {fileID: -986461103144526899}
+  - component: {fileID: 7258188375179453679}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -137,19 +137,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1324948746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7656827130424974269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3442c0e85c3046afb588e43147743ed8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
 --- !u!114 &2246303789727134232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +151,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   startHealth: 1
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8290867555349826787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,3 +203,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0247095c3a24f678777fc558b060d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7258188375179453679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656827130424974269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7579022c9a2f4e94a553ce7f90c8df5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 11400000, guid: d355655217a084a4e87701858bb0ab20, type: 2}

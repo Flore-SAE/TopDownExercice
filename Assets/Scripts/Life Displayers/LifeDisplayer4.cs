@@ -6,7 +6,7 @@ public class LifeDisplayer4 : MonoBehaviour
     public GameObject heart;
     public PlayerHealthTunnel playerHealthTunnel;
 
-    private void Awake()
+    private void OnEnable()
     {
         playerHealthTunnel.lifeDisplayer = this;
     }
@@ -22,5 +22,10 @@ public class LifeDisplayer4 : MonoBehaviour
         {
             Instantiate(heart, Vector3.zero, Quaternion.identity, transform);
         }
+    }
+
+    private void OnDisable()
+    {
+        playerHealthTunnel.lifeDisplayer = null;
     }
 }

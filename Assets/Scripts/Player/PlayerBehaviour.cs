@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    public PlayerSpeedTunnel playerSpeed;
     private AddForceMove2D move;
 
     private Roller2D roll;
@@ -51,5 +52,6 @@ public class PlayerBehaviour : MonoBehaviour
     private void Update()
     {
        animations.SetSpeed(rigidbody2D.velocity.sqrMagnitude);
+       playerSpeed.DisplaySpeed(rigidbody2D.velocity.magnitude);
     }
 }
