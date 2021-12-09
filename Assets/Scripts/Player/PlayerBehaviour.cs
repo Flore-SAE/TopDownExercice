@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerBehaviour : MonoBehaviour
+public class PlayerBehaviour : MonoBehaviour, IDie
 {
     public PlayerSpeedTunnel playerSpeed;
     private AddForceMove2D move;
@@ -53,5 +53,11 @@ public class PlayerBehaviour : MonoBehaviour
     {
        animations.SetSpeed(rigidbody2D.velocity.sqrMagnitude);
        playerSpeed.DisplaySpeed(rigidbody2D.velocity.magnitude);
+    }
+
+    public void OnDie()
+    {
+        GetComponent<Collider2D>().enabled = false;
+        rigidbody2D.simulated = false;
     }
 }

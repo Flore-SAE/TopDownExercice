@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3001119687925957692}
   - component: {fileID: 7014673714343422816}
   - component: {fileID: 2027700447}
+  - component: {fileID: 1798379559}
   m_Layer: 8
   m_Name: AttackDown
   m_TagString: Untagged
@@ -79,6 +80,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1798379559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569330951347597282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55ef32200504e5e9324c22aa97e05ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 1
 --- !u!1 &3319475747342763522
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +104,7 @@ GameObject:
   - component: {fileID: 4751636693957840730}
   - component: {fileID: 8830253301164299794}
   - component: {fileID: 1267642044}
+  - component: {fileID: 755419422}
   m_Layer: 8
   m_Name: AttackRight
   m_TagString: Untagged
@@ -158,6 +173,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &755419422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3319475747342763522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55ef32200504e5e9324c22aa97e05ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 1
 --- !u!1 &6231384520043658963
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,8 +206,8 @@ GameObject:
   - component: {fileID: 4917766077131732885}
   - component: {fileID: 1741433884}
   - component: {fileID: 7087409023753953113}
-  - component: {fileID: 1143795210}
   - component: {fileID: 1871639874470762833}
+  - component: {fileID: 7668711343912077717}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -456,6 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8953edcacb89ea347b8979933560160f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: {fileID: 11400000, guid: d816a45a15a4a874ba78463b56910a40, type: 2}
 --- !u!114 &1595307116604915105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +513,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   startHealth: 3
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 54c2670c27252d544a4227fcdfdf5936, type: 2}
+        m_TargetAssemblyTypeName: GameEvent`1[[System.Int32, mscorlib
+        m_MethodName: Raise
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  damageTaken:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Cinemachine.CinemachineImpulseSource, Cinemachine
+        m_MethodName: GenerateImpulse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4917766077131732885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,18 +580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a0e4c2c43d4d309ef3d342612cb37b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1143795210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6231384520043658963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b670f4a87b44cb288e8be7146f4cd91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1871639874470762833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,6 +593,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rollDistance: 2
+--- !u!114 &7668711343912077717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6231384520043658963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc455ddf9b1f4da2a4f57f1c2234e0a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6715517016758135975
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +616,7 @@ GameObject:
   - component: {fileID: 1303341196944879755}
   - component: {fileID: 471758558477353226}
   - component: {fileID: 157400875}
+  - component: {fileID: 1823523682}
   m_Layer: 8
   m_Name: AttackUp
   m_TagString: Untagged
@@ -625,6 +685,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1823523682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6715517016758135975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55ef32200504e5e9324c22aa97e05ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 1
 --- !u!1 &7818556318116697563
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +709,7 @@ GameObject:
   - component: {fileID: 6999938898179259174}
   - component: {fileID: 6282679326404123967}
   - component: {fileID: 1607330721}
+  - component: {fileID: 602823247}
   m_Layer: 8
   m_Name: AttackLeft
   m_TagString: Untagged
@@ -704,3 +778,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &602823247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7818556318116697563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55ef32200504e5e9324c22aa97e05ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 1

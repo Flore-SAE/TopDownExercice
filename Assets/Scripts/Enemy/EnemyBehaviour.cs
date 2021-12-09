@@ -1,8 +1,8 @@
+using System;
 using UnityEngine;
 
-public class EnemyBehaviour : MonoBehaviour
+public class EnemyBehaviour : MonoBehaviour, IDie
 {
-
     private Mover2D move2D;
     private Transform player;
 
@@ -18,4 +18,9 @@ public class EnemyBehaviour : MonoBehaviour
         move2D.Move(playerDirection);
     }
 
+    public void OnDie()
+    {
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().simulated = false;
+    }
 }

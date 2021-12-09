@@ -1,26 +1,27 @@
 using UnityEngine;
 
 [RequireComponent(typeof(HealthBehaviour))]
-public abstract class DeathBehaviour : MonoBehaviour
+public class DeathBehaviour : MonoBehaviour
 {
-    private HealthBehaviour healthBehaviour;
-
     private void Awake()
     {
-        healthBehaviour = GetComponent<HealthBehaviour>();
+        var healthBehaviour = GetComponent<HealthBehaviour>();
+        healthBehaviour.healthChanged.AddListener(CheckForDeath);
     }
 
-    private void Update()
+    private void CheckForDeath(int health)
     {
-        CheckForDeath();
-    }
-
-    private void CheckForDeath()
-    {
-        if (healthBehaviour.currentHealth > 0) return;
+        if (health > 0) return;
         Die();
         Destroy(this);
     }
 
-    protected abstract void Die();
+    private void Die()
+    {
+        var dieComponents = GetComponents<IDie>();
+        foreach (var component in dieComponents)
+        {
+            component.OnDie();
+        }
+    }
 }

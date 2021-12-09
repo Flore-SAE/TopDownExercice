@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerAnimationsController : MonoBehaviour
+public class PlayerAnimationsController : MonoBehaviour, IDie
 {
     private Animator animator;
 

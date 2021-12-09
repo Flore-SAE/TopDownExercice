@@ -264,10 +264,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2043959585528883311, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: playerSpeed
-      value: 
-      objectReference: {fileID: 11400000, guid: d816a45a15a4a874ba78463b56910a40, type: 2}
     - target: {fileID: 6231384520043658963, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
       propertyPath: m_Name
       value: Player
@@ -317,121 +313,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
       propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 842568207}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 11400000, guid: 54c2670c27252d544a4227fcdfdf5936, type: 2}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 842568207}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GenerateImpulse
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Raise
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: GenerateImpulse
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Cinemachine.CinemachineImpulseSource, Cinemachine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Cinemachine.CinemachineImpulseSource, Cinemachine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameEvent`1[[System.Int32, mscorlib
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Cinemachine.CinemachineImpulseSource, Cinemachine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: damageTaken.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030278493775287967, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06eefdc88805aca46b12b89b7e8af8ab, type: 3}
 --- !u!1 &313621350
@@ -11735,7 +11619,7 @@ MonoBehaviour:
   m_MinValue: 1
   m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 1.3
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -11750,7 +11634,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!1 &1635469966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6212787586772762223, guid: b93ceeb88da58aa4489f2a2fbf828874, type: 3}
