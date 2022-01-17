@@ -12,16 +12,20 @@ public class DeathBehaviour : MonoBehaviour
     private void CheckForDeath(int health)
     {
         if (health > 0) return;
-        Die();
-        Destroy(this);
+        StartDying();
     }
 
-    private void Die()
+    private void StartDying()
     {
         var dieComponents = GetComponents<IDie>();
         foreach (var component in dieComponents)
         {
             component.OnDie();
         }
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 }
