@@ -4,18 +4,18 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
-public class PlayerAudio : AudioManager
+public class PlayerAudio : MonoBehaviour
 {
     [Header("Footsteps")] public SoundCollection footSteps;
     public float footstepDelay;
 
-    public AudioMixerSnapshot snapshot;
     private bool isMoving;
     private Coroutine footstepCoroutine;
+    private AudioSource audioSource;
 
-    private void Start()
+    protected virtual void Awake()
     {
-       snapshot.TransitionTo(2);
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void OnMove(InputAction.CallbackContext value)
